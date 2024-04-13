@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* Animações Header */
+nav > ul li{
+    transition: all 0.5s;
+}
+nav > ul li:hover {
+    background-color: aliceblue;
+    color: rgb(2, 2, 66);
+    border-radius: 8px;
+}
+.vidro {
+    transition: all 1s;
+}
+.vidro:hover {
+    backdrop-filter: none;
+}
