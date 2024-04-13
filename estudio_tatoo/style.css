@@ -92,3 +92,6 @@ header > div > button {
     font-weight: bolder;
     border-radius: 5px;
 }
+video, source { 
+    display: none;
+}
