@@ -167,5 +167,19 @@ header > div > button {
     width: 30%;
     margin: 15px;
     padding: 15px;
+}
+/* Configuração da Sessão Aba 4 */
+.aba_4 {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 
+.artistas {
+    text-align: justify;
+    width: 30%;
+    margin: auto;
+    color: aliceblue;
 }

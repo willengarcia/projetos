@@ -41,3 +41,34 @@ nav > ul li:hover {
         translate: 0 0;
     }
 }
+
+/* Animações na aba 4 */
+.pessoa_1 {
+    animation-name: invisibilidade;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    opacity: 1;
+}
+.pessoa_2 {
+    animation-name: invisibilidade;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    opacity: 1;
+}
+.pessoa_3 {
+    animation-name:invisibilidade;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    opacity: 1;
+}
+@keyframes invisibilidade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;;
+    }
+}
