@@ -14,3 +14,30 @@ nav > ul li:hover {
 .vidro:hover {
     backdrop-filter: none;
 }
+
+/* Animações quantidades */
+.quantidade {
+    transition: all 0.5s;
+}
+.quantidade:hover {
+    transform: scale(110%);
+    background-color: aliceblue;
+    color: black;
+} 
+
+/* Animações na Aba 3 */
+.aba_3 > img {
+    animation: animacao 0.5ms ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 45%; /* se vai aparecer antes ou não */
+}
+@keyframes animacao {
+    from{
+        opacity: 0;
+        translate: -100vw 0;
+    }
+    to{
+        opacity: 1;
+        translate: 0 0;
+    }
+}
