@@ -41,6 +41,13 @@ nav > ul li:hover {
         translate: 0 0;
     }
 }
+.aba_3 > img {
+    transition: all .3s;
+    cursor: zoom-in;
+}
+.aba_3 > img:hover {
+    transform: scale(115%);
+}
 
 /* Animações na aba 4 */
 .pessoa_1 {

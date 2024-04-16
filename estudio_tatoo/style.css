@@ -45,8 +45,8 @@ nav > h1 {
     margin: auto;
     padding: 10px;
     width: max-content;
-    font-size: 20px;
-    color: #0d1133;
+    font-size: 180%;
+    color: #0111a3;
     text-shadow: 0px 0px 7px beige;
 }
 nav > ul {
@@ -61,7 +61,7 @@ nav > ul li {
 nav > ul li a {
     font-family: "Kanit", sans-serif;
     text-decoration: underline;
-    font-size: 12px;
+    font-size: 16px;
     color: rgb(5, 83, 119);
 }
 
@@ -168,6 +168,7 @@ header > div > button {
     margin: 15px;
     padding: 15px;
 }
+
 /* Configuração da Sessão Aba 4 */
 .aba_4 {
     margin: auto;
@@ -176,10 +177,41 @@ header > div > button {
     justify-content: space-around;
     align-items: center;
 }
-
 .artistas {
     text-align: justify;
     width: 30%;
     margin: auto;
     color: aliceblue;
+}
+
+/* Configuração do Footer */
+footer {
+    color: white;
+    margin: auto;
+    width: 100%;
+    margin-top: 5%;
+}
+.mapa { 
+    width: 98%;
+    margin: auto;
+}
+.mapa > iframe {
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+footer > ul {
+    width: max-content;
+    margin: auto;
+}
+footer > ul li {
+    display: inline-block;
+    margin: auto;
+    padding: 2px;
+}
+footer > ul li a {
+    font-family: "Kanit", sans-serif;
+    text-decoration: underline;
+    font-size: 12px;
+    color: rgb(5, 83, 119);
 }
