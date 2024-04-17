@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* 
+    flexbox: 
+        - unidimensional
+        - distribuiçao de espaços
+        - a partir do conteúdo
+        - para porções de layout
+        - elementos de UI
+    
+    Grid:
+        - bidimensional
+        - a partir de definição de grid
+        - ocupação de espaços pré-definidos
+        - para layouts completos
+        - layouts mais abragentes
+        - requer menos mq
+*/
+/* No grid-template-columns, pode utilizar as funções em que:
+    reapeat(nº de vezes que queremos repertir, nº em px)
+    minmax(valor minimo, valor maximo)
+
+    obs: pode colocar o minmax dentro de repeat
+
+    pode colocar tambem o valor de 1fr(fraçoes)
+*/
+
+/* Pode colocar mq dentro de um seletor para responsividade de grid
+    seletor {
+        @media (min-width:350px){
+            grid-template-columns: valores;
+        }
+    }
+*/
+body {
+    display: grid;
+    @media (min-width:350px) {
+        grid-template-columns: repeat(3, auto);
+    }
+    grid-template-columns: repeat(3, minmax(100px, auto));/*   define as colunas */
+    column-gap: 10px; /* define o intervao entre as colunas */
+    row-gap: 10px; /* define o intervalo entre as linhas */
+    /* gap, é a propriedade que define o intervalo entre colunas e linhas */
+} 
+.grade {
+    padding: 20px 0;
+    border: 1px solid black;
+    background-color: cadetblue;
+}
+.grade1 {
+    grid-column-start: 1; /* propriedades grid-column-(start/end), é onde ela vai ocupar o espaço em coluna (número intero), o mesmo serve para o grid-row-(start/end)*/
+    grid-column-end: 4;
+}
+.grade2 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+.grade5 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
