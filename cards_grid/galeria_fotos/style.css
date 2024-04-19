@@ -11,8 +11,6 @@ body {
 }
 .grade {
     margin: auto;
-    width: 175px;
-    height: 175px;
     background-color: aqua;
     border: 1px solid black;
     transition: all 0.5s;
