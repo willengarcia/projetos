@@ -1,7 +1,6 @@
 @charset "UTF-8";
 body {
     background-color: cadetblue;
-    filter: blur(2px);
 }
 div {
     background-color: brown;
@@ -31,4 +30,18 @@ input {
 legend {
     font-size: 35px;
     color: rgb(82, 0, 0);
+}
+#termos {
+    width: 245px;
+    margin: auto;
+    display: block;
+}
+#itermos {
+    display: inline-block;
+}
+#enviar {
+    margin: auto;
+    padding: 2%;
+    width: 20%;
+    font-size: 16px;
 }
