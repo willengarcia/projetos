@@ -1,0 +1,25 @@
+@charset "UTF-8";
+body {
+    background-color: cadetblue;
+}
+div {
+    background-color: brown;
+    width: 70%;
+    margin: auto;
+}
+form { 
+    margin: auto;
+    width: 70%;
+    background-color: chartreuse;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+}
+legend {
+    font-size: 35px;
+}
