@@ -4,18 +4,13 @@
 }
 body {
     display: grid;
-    grid-template-columns: repeat(5, auto);
-    gap: 10px ;
-    justify-content: space-around;
-    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 50px ;
+    
 }
-.grade {
-    margin: auto;
-    background-color: aqua;
-    border: 1px solid black;
-    transition: all 0.5s;
-}
-.grade:hover {
-    transform: rotateY(190deg);
-    background-color: darkred;
+div, img {
+    width: 80%;
+    margin: 2%;
+    border-radius: 20px;
 }
