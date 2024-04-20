@@ -1,0 +1,71 @@
+@charset "UTF-8";
+:root {
+    --cor-azul-pastel:#3D5A73;
+    --cor-verde-cinza:#2F3D40;
+    --cor-cinza:#455559;
+    --cor-verde-pastel:#28403D;
+    --cor-verde-escuro:#182625;
+}
+@media screen and (min-width: 993px) and (max-width: 1700px){
+    
+    body {
+        background-color: var(--cor-verde-escuro);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 97vh;
+    }
+    .formulario {
+        background-image: linear-gradient(to left, var(--cor-verde-escuro), var(--cor-verde-cinza), var(--cor-cinza));
+        width: 70%;
+        margin: auto;
+        border-radius: 20px;
+    }
+    form { 
+        margin: auto;
+        width: 70%;
+    }
+    fieldset {
+        font-size: 20px;
+        background-image: url('imagens/fundo.png');
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px rgb(19, 17, 17);
+    }
+    label, input {
+        display: block;
+    }
+    label {
+        margin: 3% auto auto auto;
+        color: rgb(49, 3, 21);
+    }
+    input {
+        font-size: 14px;
+        width: auto;
+    }
+    #iCNPJ, #iCPF, #pessoaF, #pessoaJ {
+        display: inline-block;
+    }
+    legend {
+        font-size: 35px;
+        color: rgb(255, 255, 255);
+        background-color: var(--cor-verde-escuro);
+        border-radius: 0px 0px 20px 20px;
+        padding: 0px 2%;
+    }
+    #termos {
+        width: 245px;
+        margin: auto;
+        display: block;
+    }
+    #itermos {
+        display: inline-block;
+    }
+    #enviar {
+        margin: auto;
+        padding: 2%;
+        width: 20%;
+        font-size: 16px;
+    }
+}

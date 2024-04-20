@@ -4,38 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="mq.css">
 </head>
 <body>
     
     <div class="formulario">
-        <form action="#">
+        <form action="#" method="POST">
             <fieldset>
                 <legend>Cadastro</legend>
-                <label for="iemail">E-mail</label>
-                <input type="email" name="email" id="iemail" placeholder="exemplo@exemplo.com">
-                <label for="inome">Nome completo</label>
-                <input type="text" name="nome" id="inome" placeholder="Ana Júlia Serrão Guedes">
+                <label for="iemail">E-mail*</label>
+                <input type="email" name="email" id="iemail" placeholder="exemplo@exemplo.com" required>
+                <label for="inome">Nome completo*</label>
+                <input type="text" name="nome" id="inome" placeholder="Ana Júlia Serrão Guedes" required>
                 <label for="iCPF" id="pessoaF">Pessoa Física</label>
-                <input type="radio" name="juridico" id="iCPF" value="CPF">
+                <input type="radio" name="juridico" id="iCPF" value="CPF" required>
                 <label for="iCNPJ" id="pessoaJ">Pessoa Jurídica</label>
-                <input type="radio" name="juridico" id="iCNPJ" value="CNPJ">
-                <label for="isenha">Senha</label>
-                <input type="password" name="senha" id="isenha">
+                <input type="radio" name="juridico" id="iCNPJ" value="CNPJ" required>
+                <label for="isenha">Senha*</label>
+                <input type="password" name="senha" id="isenha" required>
         
-                <label for="inascimento">Data de Nascimento</label>
-                <input type="date" name="data" id="inascimento">
-                <label for="icpf">CPF</label>
-                <input type="tex" id="icpf" placeholder="000.000.000-00" pattern="^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$">
-                <label for="icep">CEP</label>
-                <input type="text" id="icep" placeholder="000000-00">
-                <label for="iendereco">Endereço</label>
-                <input type="text" id="iendereco" placeholder="Rua Décima Segunda, 41">
+                <label for="inascimento">Data de Nascimento*</label>
+                <input type="date" name="data" id="inascimento" required>
+                <label for="icpf">CPF*</label>
+                <input type="tex" id="icpf" placeholder="000.000.000-00" pattern="^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$" required>
+                <label for="icep">CEP*</label>
+                <input type="text" id="icep" placeholder="000000-00" required>
+                <label for="iendereco">Endereço*</label>
+                <input type="text" id="iendereco" placeholder="Rua Décima Segunda, 41" required>
             </fieldset>
             
-            <label for="itermos" id="termos"><input type="checkbox" name="termos" id="itermos">Concordo com o <a href="#" >Termos de Uso</a></label>
+            <label for="itermos" id="termos"><input type="checkbox" name="termos" id="itermos" required>Concordo com o <a href="#" >Termos de Uso</a></label>
             
-            <input type="button" value="Enviar" id="enviar">
+            <input type="submit" value="Enviar" id="enviar">
         </form>
     </div>
 </body>
