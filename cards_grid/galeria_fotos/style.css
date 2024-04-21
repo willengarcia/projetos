@@ -4,13 +4,64 @@
 }
 body {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
-    gap: 50px ;
-    
+    grid-template-columns: repeat(2, auto);
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px;
+    min-height: 100vh;
 }
-div, img {
-    width: 80%;
+.game {
+    background-size: cover;
+    background-image: url('https://source.unsplash.com/random?a=1');
+    width: 400px;
+    height: 400px;
     margin: 2%;
-    border-radius: 20px;
+    transform-style: preserve-3d;
+    transition: .3s;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.397);
+}
+.game::before {
+    content: '';
+    position: absolute;
+    background-image: url('https://source.unsplash.com/random?a=1');
+    background-size: cover;
+    width: 45px;
+    height: 100%;
+    transform-origin: left;
+    transform: rotateY(-90deg) translate(-100%);
+}
+.game:hover {
+    transform: rotateY(45deg) translateY(-45px);
+    box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.829);
+}
+
+.subir {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(-30deg) skew(25deg) scale(.8);
+    transition: 0.5s;
+}
+.subir img {
+    position: absolute;
+    width: 100%;
+    transition: 0.5s;
+}
+.subir:hover img:nth-child(4){
+    transform: translate(160px, -160px);
+    opacity: 1;
+}
+.subir:hover img:nth-child(3){
+    transform: translate(120px, -120px);
+    opacity: 0.8;
+}
+.subir:hover img:nth-child(2){
+    transform: translate(80px, -80px);
+    opacity: 0.6;
+}
+.subir:hover img:nth-child(1){
+    transform: translate(40px, -40px);
+    opacity: 0.4;
 }
