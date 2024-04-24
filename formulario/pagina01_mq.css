@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    font-family: "Kanit", sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+:root {
+    --cor-fundo: #C7D1D9;
+    --cor-fundo-azul: #132F40;
+    --cor-botoes: #1FBF92;
+    --cor-verde: #035941;
+    --cor-contraste-azul:#56BFA1;
+}
+body {
+    background-color: var(--cor-fundo);
+}
+
+/* Configuração do Nav */
+nav {
+    background-color: var(--cor-fundo);
+    width: 80%;
+    margin: auto;
+    padding: 5px 10px;
+}
+nav > button {
+    background-color: var(--cor-fundo-azul);
+    color: white;
+    text-shadow: 0px 0px 2px var(--cor-contraste-azul), 0px 0px 4px var(--cor-botoes);
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+nav > ul {
+    float: right;
+}
+nav li {
+    margin: 5px 10px;
+    display: inline-block;
+    background-color: var(--cor-fundo-azul);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+nav li a {
+    color: white;
+    text-shadow: 0px 0px 2px var(--cor-contraste-azul), 0px 0px 4px var(--cor-botoes);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Configuração do header */
+header {
+    background-color: var(--cor-fundo-azul);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+header > .cabeca01 {
+    width: 55%;
+    margin: auto;
+}
+header .traco01, header .traco02 {
+    display: inline-block;
+    background-color: var(--cor-botoes);
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgba(2, 138, 13, 0.637), 0px 0px 5px rgb(1, 255, 22), 0px 0px 7px rgb(255, 255, 255);
+    margin: 10px 5px;
+}
+header .traco01 {
+    padding: 3px 10%;
+}
+header .traco02 {
+    padding: 3px 25%;
+}
+header > .cabeca01 h1 {
+    color: white;
+    font-family: "Kanit", sans-serif;
+    text-align: justify;
+    font-size: 45px;
+    margin: 10px 0px;
+}
+header > .cabeca01 button {
+    background-color: var(--cor-botoes);
+    color: white;
+    text-shadow: 0px 0px 2px var(--cor-contraste-azul), 0px 0px 4px var(--cor-botoes);
+    border-radius: 15px;
+    border: none;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 50px 0px;
+}
+header > .cabeca02 {
+    margin: auto;
+    width: 30%;
+}
+header > .cabeca02 img {
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px rgb(3, 56, 3), 0px 0px 5px rgb(8, 129, 103);
+}

@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="mq.css">
 </head>
 <body>
-    
     <div class="formulario">
-        <form action="#" method="POST">
+        <form>
             <fieldset>
                 <legend>Cadastro</legend>
                 <label for="iemail">E-mail*</label>
@@ -36,9 +35,11 @@
             
             <label for="itermos" id="termos"><input type="checkbox" name="termos" id="itermos" required>Concordo com o <a href="#" >Termos de Uso</a></label>
             
-            <input type="submit" value="Enviar" id="enviar">
+            
         </form>
+        <button onclick="redirect()" id="enviar">Enviar</button>
     </div>
     <!-- Formulário Simples-->
+    <script src="script.js"></script>
 </body>
 </html>

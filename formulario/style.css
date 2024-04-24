@@ -68,4 +68,5 @@ legend {
     padding: 2%;
     width: 50%;
     font-size: 16px;
+    display: block;
 }
