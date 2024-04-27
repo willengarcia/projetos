@@ -9,7 +9,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: rgb(56, 1, 1);
 }
 .efeito1 > h1 {
     background-image:url('https://i.gifer.com/VIrG.gif');
@@ -17,7 +17,7 @@
     background-clip: text;
     background-position: bottom;
     background-size: cover;
-    font-size: 100px;
+    font-size: 750%;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -88,29 +88,66 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.753);
+    background-color: rgba(240, 210, 154, 0.753);
 }
 .cartao {
-    width: 230px;
-    height: 480px;
-    margin: 20px;
-    border-radius: 30px;
-    background: url('imagens/cell.png'), black;
-    background-repeat: no-repeat;
-    background-position: top;
+    background-image: linear-gradient(#819e3e, rgb(168, 116, 56));
+    overflow: hidden;
+    border-radius: 10px;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0px 30px;
+}
+.cartao:hover {
+    background-image: linear-gradient(rgba(243, 168, 6, 0.925), rgba(48, 48, 2, 0.479));
+}
+.cartao:hover .content {
+    padding: 20px;
+    height: 200px;
+    transform: translateY(0px);
+}
+.imagem {
+    background-image: url('imagens/bg.jpg');
+    background-position: center;
     background-size: cover;
-    position: relative;
+    width: 360px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+    transition: all .5s;
 }
-.cartao > img {
-    width: 70%;
-    position: relative;
-    bottom: 30px;
-    left: 35px;
-    top: 150px;
+.cartao:hover .imagem {
+    opacity: 1;
+    width: 500px;
 }
-.cartao:hover{
-    transform: translateX(20px);
+p {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
 }
-img:hover {
-    transform: skewX(10deg);
+.content {
+    padding: 0 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateY(30px);
+}
+h1 {
+    font-size: 24px;
+}
+p {
+    font-size: 16px;
+    font-weight: 100;
+    opacity: .7;
+}
+span {
+    padding: 15px;
+    font-size: 28px;
 }
