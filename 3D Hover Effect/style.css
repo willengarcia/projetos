@@ -1,0 +1,43 @@
+body {
+  background-color: #0D1117;
+}
+
+article {
+  margin: 50px auto;
+  width: 200px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+article img:first-child {
+  width: 100%;
+  box-shadow: 0px 10px 15px -3px rgba(233, 233, 233, 0.5);
+  border-radius: 8px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+article img:last-child {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 104px;
+  margin: auto;
+  transform: translateY(25%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+article:hover img:first-child {
+  transform: perspective(250px)
+  rotateX(40deg)
+  translateY(-5%)
+  translateZ(0);
+}
+
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10deg);
+}
