@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:100;
+    font-style: normal;
+}
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+/* Começo menu Hamburguer header */
+a {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.header {
+    background-color: #a5c;
+    padding-inline: 16px;
+}
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 50px;
+}
+.nav-list {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+.nav-list  a {
+    font-size: 18px;
+    color: white;
+    padding-block: 16px;
+}
+.hero {
+    height: calc(100vh - 70px);
+    background: center / cover no-repeat rgb(163, 243, 216);
+}
+.hamburguer {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid white;
+    cursor: pointer;
+}
+.hamburguer::before,
+.hamburguer::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin-top: 5px;
+    position: relative;
+    transition: .3s;
+}
+@media (max-width: 750px){
+    .hamburguer{
+        display: block;
+        z-index: 1;
+    }
+    .nav-list {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #a5c;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+    .nav-list a {
+        font-size: 24px;
+        opacity: 0;
+    }
+    .nav-list li:nth-child(1) a  {
+        transition: .5s .2s;
+    }
+    .nav-list li:nth-child(2) a  {
+        transition: .5s .4s;
+    }
+    .nav-list li:nth-child(3) a  {
+        transition: .5s .6s;
+    }
+
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+    .nav.active .nav-list a{
+        opacity: 1;
+    }
+    .nav.active .hamburguer{
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+    .nav.active .hamburguer::before{
+        transform: rotate(135deg)
+    }
+    .nav.active .hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+/* Final menu Hamburguer */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    background-image: url(imagens/bg-main.jpg);
+}
+.introducao {
+    width: 70%;
+    justify-self: center;
+}
+.introducao > h1 {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 1rem;
+}
+.introducao > p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+/* Começo cartão sobre nós main*/
+.cartao {
+    background-image: linear-gradient(#3e489e, rgb(56, 101, 168));
+    overflow: hidden;
+    border-radius: 10px;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0px 30px;
+    justify-self: center;
+}
+.cartao:hover {
+    background-image: linear-gradient(rgba(6, 69, 243, 0.925), rgba(20, 2, 48, 0.479));
+}
+.cartao:hover .content {
+    padding: 20px;
+    height: 225px; /* A justa o tamanho do card*/
+    transform: translateY(0px);
+}
+.imagem {
+    background-image: url('imagens/bg-rh.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 360px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+    transition: all .5s;
+}
+.cartao:hover .imagem {
+    opacity: 1;
+    width: 500px;
+}
+aside p {
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.content {
+    padding: 0 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateY(30px);
+}
+aside h2 {
+    font-size: 24px;
+}
+.imagem p {
+    font-size: 20px;
+    font-weight: 700;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+    opacity: .9;
+}
+span {
+    padding: 15px;
+    font-size: 28px;
+}
+/* Fim cartão sobre nós */
+.grafico {
+    width: 300px;
+}
