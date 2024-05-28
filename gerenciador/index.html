@@ -10,9 +10,8 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <img src="imagens/gestao.png" alt="" class="logo">
             <button class="hamburguer"></button>
-            <ulm class="nav-list">
+            <ul class="nav-list">
                 <li><a href="#">Pesquisa</a></li>
                 <li><a href="#">Inclusão</a></li>
                 <li><a href="#">Exclusão</a></li>
@@ -40,7 +39,7 @@
                 <span>&#8673</span>
             </div>
         </aside>
-        <section class="sesssao1">
+        <section class="sessao1">
             <table id="tabela-colaboradores">
                 <caption>Documentação de Colaboradores</caption>
                 <thead>
@@ -59,25 +58,96 @@
                         <td>Jorge William</td>
                         <td>A5</td>
                         <td>Nº3</td>
-                        <td>YT86hUJH89H</td>¨
-                        <td><input type="image" src="" alt=""></td>
+                        <td>YT86hUJH89H</td>
+                        <td><input type="image" src="imagens/doc.jpg" alt="" class="visu-doc"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Jorge William</td>
+                        <td>A5</td>
+                        <td>Nº3</td>
+                        <td>YT86hUJH89H</td>
+                        <td><input type="image" src="imagens/doc.jpg" alt="" class="visu-doc"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Jorge William</td>
+                        <td>A5</td>
+                        <td>Nº3</td>
+                        <td>YT86hUJH89H</td>
+                        <td><input type="image" src="imagens/doc.jpg" alt="" class="visu-doc"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Jorge William</td>
+                        <td>A5</td>
+                        <td>Nº3</td>
+                        <td>YT86hUJH89H</td>
+                        <td><input type="image" src="imagens/doc.jpg" alt="" class="visu-doc"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Jorge William</td>
+                        <td>A5</td>
+                        <td>Nº3</td>
+                        <td>YT86hUJH89H</td>
+                        <td><input type="image" src="imagens/doc.jpg" alt="" class="visu-doc"></td>
                     </tr>
                 </tbody>
             </table>
-            <article class="controle">
-                <label for="id">Nome</label>
-                <input type="text" name="id" id="id">
+            <article class="controle" id="controle">
+                <div class="atribuicao">
+                    <label for="id">ID</label>
+                    <input type="text" name="id" id="id">
+                </div>
 
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome">
-                <input type="text" name="gaveta" id="gaveta">
-                <input type="text" name="pasta" id="pasta">
-                <input type="text" name="chave" id="chave">
-                <input type="file" name="file" id="file">
+                <div class="atribuicao">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+
+                <div class="atribuicao">
+                    <label for="gaveta">Gaveta</label>
+                    <input type="text" name="gaveta" id="gaveta">
+                </div>
+
+                <div class="atribuicao">
+                    <label for="pasta">Pasta</label>
+                    <input type="text" name="pasta" id="pasta">
+                </div>
+
+                <div class="atribuicao">
+                    <label for="chave">Chave</label>
+                    <input type="text" name="chave" id="chave">
+                </div>
+
+                <div class="atribuicao">
+                    <label for="arquivo">Escolha</label>
+                    <input type="file" name="file" id="file">
+                </div>
+                <div class="atribuicao condicoes">
+                    <div class="radios">
+                        <label for="insercao">Inserir</label>
+                        <input type="radio" name="condicao" id="inserir">
+                    </div>
+
+                    <div class="radios">
+                        <label for="exclusao">Exclusão</label>
+                        <input type="radio" name="condicao" id="exclusao">
+                    </div>
+
+                    <div class="radios">
+                        <label for="alteracao">Alteração</label>
+                        <input type="radio" name="condicao" id="alteracao">
+                    </div>
+
+                    <div class="radios">
+                        <label for="Pesquisa">Pesquisa</label>
+                        <input type="radio" name="condicao" id="pesquisa">
+                    </div>
+                </div>
+                <button>Adicionar</button>
             </article>
-        </section>
-        <section>
-            <article></article>
         </section>
     </main>
     <!-- <footer>

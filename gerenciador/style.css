@@ -33,22 +33,15 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-.logo {
-    width: 50px;
-}
 .nav-list {
     display: flex;
-    gap: 32px;
+    gap: 20px;
     list-style: none;
 }
 .nav-list  a {
-    font-size: 18px;
+    font-size: clamp(.8rem, 2.5vw, 1.5rem);
     color: white;
     padding-block: 16px;
-}
-.hero {
-    height: calc(100vh - 70px);
-    background: center / cover no-repeat rgb(163, 243, 216);
 }
 .hamburguer {
     display: none;
@@ -57,75 +50,10 @@ a {
     border-top: 3px solid white;
     cursor: pointer;
 }
-.hamburguer::before,
-.hamburguer::after{
-    content: " ";
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin-top: 5px;
-    position: relative;
-    transition: .3s;
-}
-@media (max-width: 750px){
-    .hamburguer{
-        display: block;
-        z-index: 1;
-    }
-    .nav-list {
-        position: fixed;
-        top:0;
-        left:0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #a5c;
-        clip-path: circle(100px at 90% -15%);
-        transition: 1s ease-out;
-
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        gap: 0;
-        pointer-events: none;
-    }
-    .nav-list a {
-        font-size: 24px;
-        opacity: 0;
-    }
-    .nav-list li:nth-child(1) a  {
-        transition: .5s .2s;
-    }
-    .nav-list li:nth-child(2) a  {
-        transition: .5s .4s;
-    }
-    .nav-list li:nth-child(3) a  {
-        transition: .5s .6s;
-    }
-    .nav.active .nav-list {
-        clip-path: circle(1500px at 90% -15%);
-        pointer-events: all;
-    }
-    .nav.active .nav-list a{
-        opacity: 1;
-    }
-    .nav.active .hamburguer{
-        position: fixed;
-        top: 26px;
-        right: 16px;
-        border-top-color: transparent;
-    }
-    .nav.active .hamburguer::before{
-        transform: rotate(135deg)
-    }
-    .nav.active .hamburguer::after{
-        transform: rotate(-135deg);
-        top: -7px;
-    }
-}
 /* Final menu Hamburguer */
 /* Começo main */
 .hero {
+    background: center / cover no-repeat rgb(163, 243, 216);
     display: grid;
     grid-template-columns: 1fr 500px;
     gap: 20px;
@@ -133,6 +61,7 @@ a {
     justify-content: space-around;
     margin: auto;
     background-image: url(imagens/bg-main.jpg);
+    background-size: cover;
 }
 .introducao {
     width: 70%;
@@ -142,23 +71,12 @@ a {
 .introducao > h1 {
     font-family: "Montserrat", sans-serif;
     margin-bottom: 1rem;
+    margin-top: 5rem;
 }
 .introducao > p {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-size: 18px;
-}
-
-@media (max-width: 750px){
-    .hero {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .introducao {
-        width: 95%;
-        justify-self: center;
-    }
 }
 /* Fim main */
 /* Começo cartão sobre nós main*/
@@ -172,7 +90,7 @@ a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin: 0px 30px;
+    margin: 0px 5rem;
     justify-self: center;
     position: relative;
 }
@@ -228,6 +146,94 @@ span {
     font-size: 28px;
 }
 /* Fim cartão sobre nós */
-.grafico {
-    width: 300px;
+
+/* Sessão 1 */
+.sessao1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    backdrop-filter: blur(3px);
+    margin-top: 5rem;
+}
+caption {
+    font-size: 1.5rem;
+}
+#tabela-colaboradores {
+    border-collapse: collapse;
+    background-color: rgba(180, 235, 236, 0.61);
+    border-radius: 0px 0px 10px 10px;
+}
+th{
+    padding: .75rem;
+    font-size: 20px;
+    border-top: 1px solid rgb(1, 10, 56);
+    border-bottom: 1px solid gray;
+}
+td {
+    padding: .75rem;
+    font-size: 18px;
+    text-align: center;
+}
+tbody >tr:nth-child(odd){
+    background-color: rgba(148, 146, 146, 0.719);
+}
+.visu-doc {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: zoom-in;
+    float: left;
+    position: relative;
+    transition: .5s all;
+}
+.visu-doc:active {
+    transform: scale(520%) translate(-75%, -70%);
+    border-radius: 5px;
+}
+caption {
+    background-color: black;
+    color: white;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+/* Controle 1 */
+.controle {
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px rgb(0, 0, 0);
+    width: max-content;
+}
+input {
+    padding: 5px;
+    width: 100%;
+    accent-color: blue;
+}
+.atribuicao {
+    margin: 1rem;
+}
+.condicoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    margin: 1rem auto;
+    display: block;
+    padding: 4px 1rem;
+}
+
+@media (max-width:950px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+    .introducao {
+        width: 90%;
+    }
+    .sessao1 {
+        display: flex;
+        flex-direction: column;
+    }
 }
