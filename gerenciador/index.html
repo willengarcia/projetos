@@ -40,61 +40,23 @@
             </div>
         </aside>
         <section class="sessao1">
-            <table id="tabela-colaboradores">
-                <caption>Documentação de Colaboradores</caption>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>NOME</th>
-                        <th>GAVETA</th>
-                        <th>PASTA</th>
-                        <th>CHAVE</th>
-                        <th>DOC</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Jorge William</td>
-                        <td>A5</td>
-                        <td>Nº3</td>
-                        <td>YT86hUJH89H</td>
-                        <td><input type="image" src="imagens/doc.jpg" alt="" class="visu-doc"></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Jorge William</td>
-                        <td>A5</td>
-                        <td>Nº3</td>
-                        <td>YT86hUJH89H</td>
-                        <td><input type="image" src="imagens/doc.jpg" alt="" class="visu-doc"></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Jorge William</td>
-                        <td>A5</td>
-                        <td>Nº3</td>
-                        <td>YT86hUJH89H</td>
-                        <td><input type="image" src="imagens/doc.jpg" alt="" class="visu-doc"></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Jorge William</td>
-                        <td>A5</td>
-                        <td>Nº3</td>
-                        <td>YT86hUJH89H</td>
-                        <td><input type="image" src="imagens/doc.jpg" alt="" class="visu-doc"></td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Jorge William</td>
-                        <td>A5</td>
-                        <td>Nº3</td>
-                        <td>YT86hUJH89H</td>
-                        <td><input type="image" src="imagens/doc.jpg" alt="" class="visu-doc"></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="container-tabela">
+                <table id="tabela-colaboradores">
+                    <caption>Documentação de Colaboradores</caption>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOME</th>
+                            <th>GAVETA</th>
+                            <th>PASTA</th>
+                            <th>CHAVE</th>
+                            <th>DOC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela">
+                    </tbody>
+                </table>
+            </div>
             <article class="controle" id="controle">
                 <div class="atribuicao">
                     <label for="id">ID</label>
@@ -146,7 +108,7 @@
                         <input type="radio" name="condicao" id="pesquisa">
                     </div>
                 </div>
-                <button>Adicionar</button>
+                <button id="executar">Executar</button>
             </article>
         </section>
     </main>
