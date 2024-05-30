@@ -15,42 +15,6 @@
     font-weight: 100;
     font-style: normal;
 }
-/* Começo menu Hamburguer header */
-a {
-    text-decoration: none;
-    font-family: sans-serif;
-}
-.header {
-    background-color: #a5c;
-    padding-inline: 16px;
-}
-.nav {
-    max-width: 1280px;
-    height: 70px;
-    margin-inline: auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.nav-list {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-.nav-list  a {
-    font-size: clamp(.8rem, 2.5vw, 1.5rem);
-    color: white;
-    padding-block: 16px;
-}
-.hamburguer {
-    display: none;
-    border: none;
-    background: none;
-    border-top: 3px solid white;
-    cursor: pointer;
-}
-/* Final menu Hamburguer */
 /* Começo main */
 .hero {
     background: center / cover no-repeat rgb(163, 243, 216);
@@ -175,14 +139,15 @@ td {
     padding: .2rem .1rem;
     font-size: 18px;
     text-align: center;
-    text-wrap: wrap;
+    text-wrap: nowrap;
+    width: auto;
 }
 tbody >tr:nth-child(odd){
     background-color: rgba(148, 146, 146, 0.719);
 }
 .visu-doc {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: zoom-in;
     float: left;
@@ -250,5 +215,20 @@ button {
         background-color: rgba(180, 235, 236, 0.61);
         border-radius: 0px 0px 10px 10px;
         width: 100%;
+    }
+    td {
+        padding: .2rem .1rem;
+        font-size: 14px;
+        text-align: center;
+    }
+    th{
+        padding: .3rem;
+        font-size: 16px;
+        border-top: 1px solid rgb(1, 10, 56);
+        border-bottom: 1px solid gray;
+    }
+    .visu-doc:active {
+        transform: scale(220%) translate(-115%, -23%);
+        border-radius: 5px;
     }
 }
