@@ -5,6 +5,7 @@ const nome = document.querySelector('#nome')
 const gaveta = document.querySelector('#gaveta')
 const pasta = document.querySelector('#pasta')
 const chave = document.querySelector('#chave')
+const radios = [...document.querySelectorAll('.radios > input')]
 
 class eventosTabela{
     criarLinha(id, nome, gaveta, pasta, chave, imagem){
@@ -38,17 +39,19 @@ class eventosTabela{
         this.valorDoc.appendChild(this.inputImagem)
     }
     removeLinha(id){
-        for(let i = 0; i<=[...document.querySelectorAll('tbody > tr')].length; i+=1){
-            if([...document.querySelectorAll('tbody > tr')][i].children[0].innerHTML == id){
-                console.log([...document.querySelectorAll('tbody > tr')][i]);
-                [...document.querySelectorAll('tbody > tr')][i].remove()
+        let linhas = [...document.querySelectorAll('tbody > tr')]
+        for(let i = 0; i<=linhas.length; i+=1){
+            if(linhas[i].children[0].innerHTML == id){
+                console.log("Linha removida com o ID"+id)
+                linhas[i].remove()
             }
         }
     }
     alteraDados(id, nome, gaveta, pasta, chave, imagem){
-        for(let i = 0; i<=[...document.querySelectorAll('tbody > tr')].length; i+=1){
-            if([...document.querySelectorAll('tbody > tr')][i].children[0].innerHTML == id){
-                const dados = [...[...document.querySelectorAll('tbody > tr')][i].children]
+        let linhas = [...document.querySelectorAll('tbody > tr')]
+        for(let i = 0; i<=linhas.length; i+=1){
+            if(linhas[i].children[0].innerHTML == id){
+                const dados = [...linhas[i].children]
                 dados[1].textContent = nome
                 dados[2].textContent = gaveta
                 dados[3].textContent = pasta
@@ -58,14 +61,16 @@ class eventosTabela{
         }
     }
 }
+
 let eventos = new eventosTabela()
 botao.addEventListener('click', (evento)=>{
-    const radios = [...document.querySelectorAll('.radios > input')]
     if(radios[0].checked) {
         eventos.criarLinha(id.value, nome.value, gaveta.value, pasta.value, chave.value, 'imagens/doc.jpg')
     }else if(radios[1].checked){
         eventos.removeLinha(id.value)
     }else if(radios[2].checked){
         eventos.alteraDados(id.value, nome.value, gaveta.value, pasta.value, chave.value, 'imagens/doc.jpg')
+    }else {
+        alert('Selecione um dos botões: Inserir, Exclusão, Alteração.')
     }
 })
