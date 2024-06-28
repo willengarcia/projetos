@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <button id="voltar"><- Voltar</button>
+    <main class="sessao1">
+        <div class="container-tabela">
+            <table id="tabela-colaboradores">
+                <caption>Despesas/Lucro</caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tipo</th>
+                        <th>Valor</th>
+                        <th>Infor</th>
+                        <th>Banco</th>
+                        <th>Foto</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo-tabela">
+                </tbody>
+            </table>
+        </div>
+        <section class="controle" id="controle">
+            <div class="atribuicao">
+                <label for="id">ID</label>
+                <input type="text" name="id" id="id">
+            </div>
+
+            <div class="atribuicao">
+                <label for="Tipo">Tipo</label>
+                <input type="text" name="Tipo" id="Tipo">
+            </div>
+
+            <div class="atribuicao">
+                <label for="Valor">Valor</label>
+                <input type="text" name="Valor" id="Valor">
+            </div>
+
+            <div class="atribuicao">
+                <label for="Infor">Infor</label>
+                <input type="text" name="Infor" id="Infor">
+            </div>
+
+            <div class="atribuicao">
+                <label for="Banco">Banco</label>
+                <input type="text" name="Banco" id="Banco">
+            </div>
+
+            <div class="atribuicao">
+                <label for="Foto">Foto</label>
+                <input type="file" name="Foto" id="Foto">
+            </div>
+            <div class="atribuicao condicoes">
+                <div class="radios">
+                    <label for="insercao">Inserir</label>
+                    <input type="radio" name="condicao" id="inserir" checked>
+                </div>
+
+                <div class="radios">
+                    <label for="exclusao">Exclusão</label>
+                    <input type="radio" name="condicao" id="exclusao">
+                </div>
+
+                <div class="radios">
+                    <label for="alteracao">Alteração</label>
+                    <input type="radio" name="condicao" id="alteracao">
+                </div>
+            </div>
+            <button id="executar">Executar</button>
+        </section>
+    </main>
+</body>
+</html>
