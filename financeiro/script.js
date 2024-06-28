@@ -1,7 +1,7 @@
 const adicionar = document.getElementById('add')
 const pValor = [...document.querySelectorAll('p')]
 adicionar.addEventListener('click', (evt)=>{
-    window.location.href = '/financeiro/adicionar/index.html'
+    window.location.href = 'https://willengarcia.github.io/projetos/financeiro/adicionar/index.html'
 })
 let valor = 0
 window.addEventListener('load', ()=>{
