@@ -3,6 +3,7 @@ const pValor = [...document.querySelectorAll('p')]
 adicionar.addEventListener('click', (evt)=>{
     window.location.href = 'https://willengarcia.github.io/projetos/financeiro/adicionar/index.html'
 })
+// oi
 let valor = 0
 window.addEventListener('load', ()=>{
     const tempo1 = ()=>{
