@@ -37,48 +37,137 @@
         border-bottom: 1px solid gray;
     }
     .listas {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         list-style: none;
         color: #607b96;
     }
+    .navegacao.activo, .listas.activo {
+        width: 100%;
+        align-items: start;
+        justify-content: start;
+        height: 100%;
+    }
     .navegacao li {
         padding: 1rem;
-        border-left: 1px solid gray;
         cursor: pointer;
+    }
+    .navegacao.activo li:nth-child(1),
+    .navegacao.activo li:nth-child(2), 
+    .navegacao.activo li:nth-child(3),
+    .navegacao.activo li:nth-child(4){
+        display: block;
+        padding: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-indent: 1rem;
+        width: 100%;
+        border-left: none;
+    }
+    .navegacao.activo li:nth-child(1),
+    .navegacao.activo li:nth-child(4){
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
+    }
+    .navegacao li:nth-child(2), 
+    .navegacao li:nth-child(3),
+    .navegacao li:nth-child(4){
+        display: none;
+    }
+    .navegacao.activo .listas {
+        flex-direction: column;
+        align-items: start;
     }
     .navegacao li.ativo {
         border-bottom: 2px solid rgb(232, 248, 1);
         color: white;
     }
+    .navegacao li.ativo.activo {
+        border-bottom: 1px solid gray;
+    }
     .projetos {
-        border-right: 1px solid gray;
+        border-right: none;
     }
     .navegacao > span {
+        display: none;
         padding: 1rem;
         border-left: 1px solid gray;
         color: #607b96;
         cursor: pointer;
     }
+    .botao {
+        display: block;
+        border: none;
+        background: none;
+        border-top: 3px solid gray;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        cursor: pointer;
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
+        z-index: 999;
+    }
+    .botao::after,
+    .botao::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    margin-top: .5rem;
+    display: block;
+    border-radius: 10px;
+    background-color: gray;
+    position: relative;
+    transition: .5s;
+    }
+    .navegacao.activo .botao::after {
+        transform: rotate(135deg);
+        background-color: gray;
+    }
+    .navegacao.activo .botao::before {
+        transform: rotate(-135deg);
+        background-color: gray;
+        box-shadow: gray;
+        top: 10px;
+    }
+    .navegacao.activo .botao {
+        border-top-color: transparent;
+        border-radius: 10px;
+        top: .3rem;
+    }
     /* header */
+    .cabeca.activo {
+        display: none;
+    }
     .cabeca {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        flex: 1;
+    }
+    .hello {
+        margin-left: 2rem;
     }
     .hello > span {
-        font-size: var(--font-size-code);
+        font-size: var(--font-size-bodytext);
         color: white;
     }
     .hello > h1 {
         font-size: var(--font-size-head);
         color: white;
+        font-weight: 400;
     }
     .hello > h2 {
-        font-size: var(--font-size-subhead);
+        font-size: var(--font-size-bodytext);
         margin-bottom: 2rem;
         color: #4d5bce;
+        font-weight: 500;
+    }
+    .hello >div{
+        margin-top: 10rem;
     }
     .hello >div >p{
         padding: .3rem;
@@ -105,31 +194,35 @@
         padding: 2rem;
         background-image: linear-gradient(30deg, #43d9ad, #4d5bce);
         border-radius: 5px;
+        display: none;
     }
     /* footer */
     footer {
+        display: none;
+    }
+    footer.activo {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-top: 1px solid gray;
         color: #607b96;
     }
-    footer ul {
+    footer.activo ul {
         display: flex;
         align-items: center;
         justify-content: center;
         list-style: none;
     }
-    footer li {
-        padding: 1rem;
-        border-left: 1px solid gray;
+    footer.activo li {
+        border-left: none;
     }
-    footer > ul li:nth-child(3) {
+    footer.activo > ul li:nth-child(3) {
         border-right: 1px solid gray;
+    }
+    footer.activo > div {
         border-left: 1px solid gray;
     }
-    footer > span {
-        padding: 1rem;
-        border-left: 1px solid gray;
+    footer.activo > div span {
+        margin-right: .5rem;
+        display: none;
     }
 }
