@@ -71,6 +71,9 @@
         border-bottom: 1px solid gray;
         border-top: 1px solid gray;
     }
+    .navegacao li:nth-child(2){
+        border-bottom: 1px solid gray;
+    }
     .navegacao li:nth-child(2),
     .navegacao li:nth-child(4){
         display: none;
@@ -82,9 +85,6 @@
     .navegacao li.ativo {
         border-bottom: 2px solid rgb(232, 248, 1);
         color: white;
-    }
-    .navegacao li.ativo.activo {
-        border-bottom: 1px solid gray;
     }
     .projetos {
         border-right: none;
