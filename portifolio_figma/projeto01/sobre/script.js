@@ -11,3 +11,11 @@ botao.addEventListener('click',()=>{
     ulLista.classList.toggle('activo')
     console.log('ativo')
 })
+window.addEventListener('scroll', function() {
+    const button = document.querySelector('.botao');
+    if (window.scrollY > 1) { // Ajuste este valor conforme necessário
+        button.classList.add('hidden');
+    } else {
+        button.classList.remove('hidden');
+    }
+});
