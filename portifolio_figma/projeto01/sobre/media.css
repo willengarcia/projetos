@@ -104,8 +104,7 @@
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
         cursor: pointer;
-        position: fixed;
-        top: 1rem;
+        position: relative;
         right: 2rem;
         z-index: 999;
     }
@@ -194,13 +193,16 @@
         color: white;
         display: inline-block;
     }
+    .codigo-informacoes {
+        overflow: scroll;
+    }
     pre.desktop{
         display: none;
         white-space: pre;
     }
     pre.mobile{
         display: block;
-        white-space: pre-wrap;
+        white-space: pre;
     }
     .sessao:nth-child(4){
         display: none;
