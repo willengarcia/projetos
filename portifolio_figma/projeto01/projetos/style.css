@@ -64,10 +64,14 @@ nav {
     color: #607b96;
     cursor: pointer;
 }
+.botao {
+    display: none;
+}
 /* header */
 .cabeca {
     flex: 1;
     display: flex;
+    border-bottom: 1px solid gray;
 }
 .sessao:nth-child(1) {
     width: 200px;
@@ -142,7 +146,7 @@ nav {
     font-size: 2em;
 }
 
-button {
+.carousel > button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -164,7 +168,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid gray;
     color: #607b96;
 }
 footer ul {
@@ -176,14 +179,20 @@ footer ul {
 footer li {
     padding: 1rem;
 }
-footer > ul li:nth-child(3) {
+footer > ul li:nth-child(2) {
     border-right: 1px solid gray;
     border-left: 1px solid gray;
 }
-footer > ul li:nth-child(2){
-    border-left: 1px solid gray;
+footer > ul li:nth-child(3) {
+    border-right: 1px solid gray;
 }
-footer > span {
+footer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
     border-left: 1px solid gray;
+}
+footer > div span {
+    margin-right: .5rem;
 }
