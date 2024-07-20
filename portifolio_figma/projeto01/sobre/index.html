@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="media.css">
     <script defer src="../script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <nav class="navegacao">
@@ -15,6 +17,7 @@
             <li class="sobre ativo">_Sobre</li>
             <li class="projetos">_Projetos</li>
         </ul>
+        <button class="botao"></button>
         <span>_contact-me</span>
     </nav>
     <header class="cabeca">
@@ -42,22 +45,40 @@
         <section class="sessao">
             <h2>informações-pessoais    &#10005;</h2>
             <div class="codigo-informacoes">
-                <ol>
-                    <li>1 /**</li>
-                    <li>2 * Sobre mim</li>
-                    <li>3 * Eu tenho 2 anos de experiência na WEB</li>
-                    <li>4 * desenvolvo interfaces interativas e</li>
-                    <li>5 * landing pages para mostrar minhas habilidades,</li>
-                    <li>6 * sou graduado em Análise e Desenvolvimento de Sistemas</li>
-                    <li>7 * na Uniasselvi, estou no 7º semestre e fiz bastante</li>
-                    <li>8 * projetos no decorrer do curso. Desenvolvo também aplicações</li>
-                    <li>9 * em Python, tal como Análise de Dados, Machine Learning</li>
-                    <li>10 * e automatizações.</li>
-                    <li>11 *</li>
-                    <li>12 * Atualmente programo em JavaScript, fazendo requisições, e</li>
-                    <li>13 * manipulação do DOM, sei fazer páginas interativas e muito mais.</li>
-                    <li>14 */</li>
-                </ol>
+                <pre class="desktop">
+     1 /**
+     2 * Sobre mim
+     3 * Eu tenho 2 anos de experiência na WEB
+     4 * desenvolvo interfaces interativas e
+     5 * landing pages para mostrar minhas habilidades,
+     6 * sou graduado em Análise e Desenvolvimento de Sistemas
+     7 * na Uniasselvi, estou no 7º semestre e fiz bastante
+     8 * projetos no decorrer do curso. Desenvolvo também aplicações
+     9 * em Python, tal como Análise de Dados, Machine Learning
+    10 * e automatizações.
+    11 *
+    12 * Atualmente programo em JavaScript, fazendo requisições, e
+    13 * manipulação do DOM, sei fazer páginas interativas e muito mais.
+    14 */
+                </pre>
+                <pre class="mobile">
+    /**
+    * About me
+    * I have 5 years of experience in web
+    * development lorem ipsum dolor sit amet,
+    * consectetur adipiscing elit, sed do eiusmod
+    * tempor incididunt ut labore et dolore
+    * magna aliqua. Ut enim ad minim veniam,
+    * quis nostrud exercitation ullamco laboris
+    * nisi ut aliquip ex ea commodo consequat.
+    * Duis aute irure dolor in reprehenderit in
+    *
+    * Duis aute irure dolor in reprehenderit in
+    * voluptate velit esse cillum dolore eu fugiat
+    * nulla pariatur. Excepteur sint occaecat
+    * officia deserunt mollit anim id est laborum.
+    */
+                </pre>
             </div>
         </section>
         <section class="sessao">
@@ -100,7 +121,7 @@
             <li><a href="#"><img src="../icones/twitter.png" alt=""></a></li>
             <li><a href="#"><img src="../icones/facebook.png" alt=""></a></li>
         </ul>
-        <span>@WillenGarcia <img src="../icones/github.png" alt=""></span>
+        <div><span>@WillenGarcia</span><img src="../icones/github.png" alt=""></div>
     </footer>
 </body>
 </html>

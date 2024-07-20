@@ -64,12 +64,16 @@ nav {
     color: #607b96;
     cursor: pointer;
 }
+.botao {
+    display: none;
+}
 /* header */
 .cabeca {
     flex: 1;
     width: 100%;
     display: grid;
     grid-template-columns: 75px 245px 1.3fr 1fr;
+    border-bottom: 1px solid gray;
 }
 .sessao:nth-child(1) {
     display: flex;
@@ -150,11 +154,14 @@ nav {
 .codigo-informacoes {
     border-top: 1px solid gray;
 }
-ol {
+pre {
     font-size: var(--font-size-code);
-    list-style: none;
-    margin-left: 1rem;
     margin-top: 1rem;
+    white-space: pre-wrap;
+}
+pre.mobile{
+    display: none;
+    white-space: pre-wrap;
 }
 .sessao:nth-child(4){
     margin-top: 2.22rem;
@@ -190,7 +197,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid gray;
     color: #607b96;
 }
 footer ul {
@@ -202,14 +208,20 @@ footer ul {
 footer li {
     padding: 1rem;
 }
-footer > ul li:nth-child(3) {
+footer > ul li:nth-child(2) {
     border-right: 1px solid gray;
     border-left: 1px solid gray;
 }
-footer > ul li:nth-child(2){
-    border-left: 1px solid gray;
+footer > ul li:nth-child(3) {
+    border-right: 1px solid gray;
 }
-footer > span {
+footer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
     border-left: 1px solid gray;
+}
+footer > div span {
+    margin-right: .5rem;
 }
