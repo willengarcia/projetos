@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitef</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sessao">
+        <div class="pesquisa">
+            <h1>Pesquisa SiTef</h1>
+            <label for="codigo">Código: </label>
+            <input type="text" id="id">
+            <button id="pesquisar">Pesquisar</button>
+        </div>
+    </section>
+    <aside>
+        <h2 class="codigo">Código: 51</h2>
+        <div class="descricoes-codigo">
+            <div class="descricao">
+                <h3 id="desc">Descrição: Saldo insuficiente</h3>
+            </div>
+            <div class="acao">
+                <h3 id="ac">Ação: Cliente deve entrar em contato com o banco</h3>
+            </div>
+            <div class="retentativa">
+                <h3 id="tentativa">Retentativa: Sim</h3>
+            </div>
+            <div class="obs">
+                <p>OBS: Em alguns casos, é possível que seu cliente receba via
+                SMS ou no APP do cartão, a informação de cobrança realizada
+                com sucesso, porém, caso a fatura deste cliente não conste
+                como PAGA na iugu, com retorno de erro LR, este lançamento
+                de cobrança é automaticamente corrigido na fatura do cliente,
+                dentro do prazo de 7 a 10 dias úteis</p>
+            </div>
+        </div>
+    </aside>
+</body>
+</html>
