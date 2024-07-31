@@ -38,6 +38,7 @@ aside {
     justify-content: center;
     border-radius: 10px;
     height: 70%;
+    width: 50%;
 }
 h2 {
     font-size: 30px;
@@ -52,6 +53,11 @@ input {
 }
 @media (max-width: 1000px) {
     body {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100dvh;
+        width: 100%;
         flex-direction: column
     };
     aside {
