@@ -38,7 +38,6 @@ aside {
     justify-content: center;
     border-radius: 10px;
     height: 70%;
-    width: 50%;
 }
 h2 {
     font-size: 30px;
@@ -56,6 +55,11 @@ input {
         flex-direction: column
     };
     aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
         width: 90%;
         height: 100dvh;
     }
