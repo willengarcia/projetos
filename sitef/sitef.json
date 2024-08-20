@@ -1,0 +1,308 @@
+[    
+    {
+        "cod":"00",
+        "descricao":"Transação Nacional Autorizada com sucesso",
+        "acao":"N/A",
+        "retentativa":null
+    },
+    {
+        "cod":"01",
+        "descricao":"Transação referida pelo emissor",
+        "acao":"Oriente o portador a contatar o emissor do cartão",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"03",
+        "descricao":"Não foi encontrada a transação",
+        "acao":"Este erro pode ser: \n número de parcelas ultrapassa o permitido. \n código de segurança inválido \n número do cartão inválido \n instabilidade no sistema da adquirente",
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"04",
+        "descricao":"Cartão com restrição",
+        "acao":"Oriente o portador a contatar o emissor do cartão (Problemas com o cartão)",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"05",
+        "descricao":"Transação não autorizada",
+        "acao":"Oriente o portador a contatar o emissor do cartão (não autorizada pelo emissor)",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"06",
+        "descricao":"Tente novamente",
+        "acao":"Problemas ocorridos na transação eletrônica, instabilidade da adquirente",
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"07",
+        "descricao":"Cartão com restrição",
+        "acao":"Oriente o portador a contatar o emissor do cartão (Problemas com o cartão)",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"08",
+        "descricao":"Código de segurança inválido",
+        "acao": "O código de segurança foi informado errado no momento da compra",
+        "retentativa": "Não"
+    },
+    {
+        "cod":"10", 
+        "descricao":"Não é permitido o envio do cartão",
+        "acao":"Adquirente está com os serviços instáveis, caso o erro continue ocorrendo entre em contato com nosso suporte técnico",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"11",
+        "descricao":"Transação Internacional Autorizada com sucesso",
+        "acao":"N/A", 
+        "retentativa":"Não"
+    },
+    {
+        "cod":"12", 
+        "descricao":"Transação inválida",
+        "acao":"Venda não autorizada pelo banco emissor do cartão. Cartão informado no momento da compra está incorreto",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"13",
+        "descricao":"Valor inválido",
+        "acao":"Verifique valor mínimo de R$5,00 para parcelamento",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"14", 
+        "descricao":"Cartão inválido",
+        "acao":"N/A", 
+        "retentativa":"Não"
+    },
+    {
+        "cod":"15", 
+        "descricao":"Emissor inválido", 
+        "acao":"Emissor sem comunicação.", 
+        "retentativa":"Não"
+    },
+    {
+        "cod":"19",
+        "descricao":"Refaça a transação ou tente novamente mais tarde.",
+        "acao":"Não foi possível processar a transação. Refaça a transação outente novamente mais tarde.", 
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"21", 
+        "descricao":"Cancelamento não efetuado.",
+        "acao":"Não foi possível processar o cancelamento.", 
+        "retentativa":"Não"
+    },
+    {
+        "cod":"22", 
+        "descricao":"Parcelamento inválido.  Número de parcelas inválidas.",
+        "acao":"Não foi possível processar a transação. Valor inválido. Refazer a transação confirmando os dados informados.", 
+        "retentativa":"Não"
+    },
+    {
+        "cod":"24", 
+        "descricao":"Quantidade de parcelas inválido",
+        "acao":"Não foi possível processar a transação. Quantidade de parcelas inválido",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"30",
+        "descricao":"Não foi possível processar a transação. Solicite ao portador que reveja os dados e tente novamente.",
+        "acao":"Não foi possível processar a transação. Reveja os dados e tente novamente. Se o erro persistir, entre em contato com a loja virtual.",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"39", 
+        "descricao":"Transação não autorizada. Erro no banco emissor.", 
+        "acao":"Transação não autorizada. Entre em contato com seu banco emissor.",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"41", 
+        "descricao":"Cartão com restrição",
+        "acao":"Oriente o portador a contatar o emissor do cartão (Problemas com o cartão)",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"43", 
+        "descricao":"Cartão com restrição",
+        "acao":"Oriente o portador a contatar o emissor do cartão (Problemas com o cartão)",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"51", 
+        "descricao":"Saldo insuficiente",
+        "acao":"Cliente deve entrar em contato com o banco",
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"52", 
+        "descricao":"Cartão com dígito de controle inválido",
+        "acao":"Não foi possível processar a transação. Cartão com dígito de controle inválido",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"54", 
+        "descricao":"Cartão vencido",
+        "acao":"Caso os dados informados estejam corretos, cliente deve entrar em contato com o banco para verificar se cartão ainda é valido",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"55", 
+        "descricao":"Senha Inválida",
+        "acao":"Senha informada está errada",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"57",
+        "descricao":"Transação não permitida ou não autorizada",
+        "acao":"Venda não autorizada pelo emissor do cartão, pois o cartão utilizado não faz parte da rede Verified by Visa ou o sistema de prevenção do banco não autorizou a compra, neste caso o cliente deverá realizar contato com banco emissor do cartão e informar que está tentando realizar uma compra no valor R$XXX e não está sendo autorizada.",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"58",
+        "descricao":"Transação não permitida",
+        "acao":"N/A",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"60", 
+        "descricao":"Transação não autorizada",
+        "acao":"Oriente o portador a contatar o emissor do cartão",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"61",
+        "descricao":"Banco emissor Visa indisponível.", 
+        "acao":"Transação não autorizada. Tente novamente. Se o erro persistir, entre em contato com seu banco emissor.",
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"62", 
+        "descricao":"Cartão com restrição",
+        "acao":"Oriente o portador a contatar o emissor do cartão. Cartão com algum bloqueio para transações online.", 
+        "retentativa":"Não"
+    },
+    {
+        "cod":"63", 
+        "descricao":"Cartão com restrição",
+        "acao":"Oriente o portador a contatar o emissor do cartão. Possível erro de segurança ao tentar processar",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"65", 
+        "descricao":"Cartão com restrição",
+        "acao":"Transação Negada. Oriente o portador a contatar o emissor do cartão (Problemas com o cartão)",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"67", 
+        "descricao":"Transação não autorizada",
+        "acao":"Transação não autorizada. Cartão bloqueado para compras hoje. Bloqueio pode ter ocorrido por excesso de tentativas inválidas",
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"70", 
+        "descricao":"Transação não autorizada. Limite excedido/sem saldo.",
+        "acao":"Transação não autorizada. Entre em contato com seu banco emissor.",
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"74", 
+        "descricao":"Transação não autorizada",
+        "acao":"Transação não autorizada. A senha está vencida.",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"75", 
+        "descricao":"Cartão com restrição",
+        "acao":"Motivo provável, Bloqueio de senha. Oriente o portador a contatar o emissor do cartão.",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"76", 
+        "descricao":"Tente novamente",
+        "acao":"N/A",
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"77", 
+        "descricao":"Cancelamento não efetuado",
+        "acao":"Cancelamento não efetuado. Não foi localizado a transação original",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"78",
+        "descricao":"Cartão não foi desbloqueado pelo portador",
+        "acao":"Cartão bloqueado. Oriente o portador a desbloqueá-lo junto ao emissor do cartão.",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"80", 
+        "descricao":"Transação não autorizada.",
+        "acao":"Transação não autorizada. Data da transação ou data do primeiro pagamento inválida. Refazer confirmando os dados",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"81", 
+        "descricao":"Transação negada",
+        "acao":"N/A ",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"82", 
+        "descricao":"Transação inválida",
+        "acao":"Provável Código de Segurança Incorreto ou Inválido",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"85",
+        "descricao":"Transação não permitida. Falha da operação",
+        "acao":"Transação não permitida. Houve um erro no processamento.Solicite ao portador que digite novamente os dados do cartão.",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"88", 
+        "descricao":"Erro na transação.",
+        "acao":"Transação não autorizada. Erro na transação. O portador deve tentar novamente e se o erro persistir, entrar em contato com o banco emissor.",
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"90",
+        "descricao":"Transação não permitida. Falha da operação",
+        "acao":"Transação não permitida. Houve um erro no processamento.Solicite ao portador que digite novamente os dados do cartão",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"91", 
+        "descricao":"Banco indisponível",
+        "acao":"Emissor sem comunicação. Oriente cliente a aguardar alguns minutos e tente novamente.",
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"92",
+        "descricao":"Transação não autorizada. Tempo de comunicação excedido",
+        "acao":"Transação não autorizada. Tempo de comunicação excedido",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"94", 
+        "descricao":"Transação não autorizada.",
+        "acao":"Transação desfeita pela bandeira",
+        "retentativa":"Não"
+    },
+    {
+        "cod":"96", 
+        "descricao":"Tente novamente",
+        "acao":"Provável venda abaixo de R$ 1,00. Falha no envio da autorização.",
+        "retentativa":"Sim"
+    },
+    {
+        "cod":"99",
+        "descricao":"Sistema do banco temporariamente fora de operação.",
+        "acao":"Tente novamente mais tarde",
+        "retentativa":"Não"
+    }
+]

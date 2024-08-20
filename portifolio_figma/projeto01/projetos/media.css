@@ -1,0 +1,262 @@
+@media (max-width: 1050px){
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+    .fira-code {
+        font-family: "Fira Code", monospace;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+    }
+    :root {
+        --font-size-head: 62px;
+        --font-size-subhead: 32px;
+        --font-size-bodytext: 18px;
+        --font-size-labels: 16px;
+        --font-size-code: 14px;
+        --cor-fundo:#011627;
+        --max-width: 1050px;
+    }
+    * {
+        padding: 0%;
+        margin: 0%;
+        font-family: "Fira Code", monospace;
+    }
+    body {
+        height: 100dvh;
+        background-color: var(--cor-fundo);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    /* nav */
+    nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+    }
+    .listas {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        color: #607b96;
+    }
+    .navegacao.activo, .listas.activo {
+        width: 100%;
+        align-items: start;
+        justify-content: start;
+        height: 100%;
+    }
+    .navegacao li {
+        padding: 1rem;
+        cursor: pointer;
+    }
+    .navegacao.activo li:nth-child(1),
+    .navegacao.activo li:nth-child(2), 
+    .navegacao.activo li:nth-child(3),
+    .navegacao.activo li:nth-child(4){
+        display: block;
+        padding: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-indent: 1rem;
+        width: 100%;
+        border-left: none;
+    }
+    .navegacao.activo li:nth-child(3) {
+        border-bottom: 1px solid gray;
+    }
+    .navegacao.activo li:nth-child(1){
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
+    }
+    .navegacao.activo li:nth-child(2) {
+        border-bottom: 1px solid gray;
+    }
+    .navegacao li:nth-child(4) {
+        border-right: 1px solid gray;
+    }
+    .navegacao.activo li:nth-child(4) {
+        border-right: none;
+    }
+    .navegacao li:nth-child(2), 
+    .navegacao li:nth-child(3){
+        display: none;
+    }
+    .navegacao.activo .listas {
+        flex-direction: column;
+        align-items: start;
+    }
+    .navegacao li.ativo{
+        border-bottom: 2px solid rgb(232, 248, 1);
+        color: white;
+    }
+    .projetos {
+        border-right: none;
+    }
+    .navegacao > span {
+        display: none;
+        padding: 1rem;
+        border-left: 1px solid gray;
+        color: #607b96;
+        cursor: pointer;
+    }
+    .botao {
+        display: block;
+        border: none;
+        background: none;
+        border-top: 3px solid gray;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        cursor: pointer;
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
+        z-index: 999;
+    }
+    .botao::after,
+    .botao::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    margin-top: .5rem;
+    display: block;
+    border-radius: 10px;
+    background-color: gray;
+    position: relative;
+    transition: .5s;
+    }
+    .navegacao.activo .botao::after {
+        transform: rotate(135deg);
+        background-color: gray;
+    }
+    .navegacao.activo .botao::before {
+        transform: rotate(-135deg);
+        background-color: gray;
+        box-shadow: gray;
+        top: 10px;
+    }
+    .navegacao.activo .botao {
+        border-top-color: transparent;
+        border-radius: 10px;
+        top: .3rem;
+    }
+    /* header */
+    .cabeca.activo {
+        display: none;
+    }
+    .cabeca {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: none;
+        flex: 1;
+        border-bottom: 1px solid gray;
+    }
+    .sessao:nth-child(1) {
+        width: 100%;
+        display: block;
+        align-items: none;
+        justify-content: none;
+        flex-direction: column;
+        border-right: none;
+    }
+    .sessao:nth-child(1) h2 {
+        font-size: var(--font-size-labels);
+        padding:.2rem;
+        text-align: left;
+        text-indent: 1rem;
+    }
+    .sessao:nth-child(2){
+        display: block;
+        flex-direction: none;
+        border-right: none;
+        width: 100%;
+    }
+    .sessao:nth-child(2) > h2 {
+        font-size: var(--font-size-labels);
+        padding:0;
+        text-indent: 1rem;
+        margin-left: 0;
+        border-right: none;
+        width: 100%;
+        background-color: #1d293a;
+    }
+    /* Carrossel */
+    .carousel {
+        position: relative;
+        width: 50%;
+        height: 70%;
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(100, 148, 237, 0.116);
+        backdrop-filter: blur(2px);
+    }
+    .carousel-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 86dvw;
+    }
+
+    .carousel-item {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+    }
+    .carousel > button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .prev {
+        left: 10px;
+    }
+    .next {
+        right: 10px;
+    }
+    /* footer */
+    footer {
+        display: none;
+    }
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #607b96;
+    }
+    footer ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
+    footer li {
+        border-left: none;
+    }
+    footer > ul li:nth-child(3) {
+        border-right: 1px solid gray;
+    }
+    footer > div {
+        border-left: 1px solid gray;
+    }
+    footer > div span {
+        margin-right: .5rem;
+        display: none;
+    }
+}

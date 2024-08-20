@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+.fira-code {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+:root {
+    --font-size-head: 62px;
+    --font-size-subhead: 32px;
+    --font-size-bodytext: 18px;
+    --font-size-labels: 16px;
+    --font-size-code: 14px;
+    --cor-fundo:#011627;
+    --max-width: 1050px;
+}
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: "Fira Code", monospace;
+}
+body {
+    height: 100dvh;
+    background-color: var(--cor-fundo);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    color: gray;
+}
+/* nav */
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+.listas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    color: #607b96;
+}
+.navegacao li {
+    padding: 1rem;
+    border-left: 1px solid gray;
+    cursor: pointer;
+}
+.navegacao li:nth-child(1){
+    border: none;
+}
+.navegacao li.ativo {
+    border-bottom: 2px solid rgb(232, 248, 1);
+    color: white;
+}
+.projetos {
+    border-right: 1px solid gray;
+}
+.navegacao > span {
+    padding: 1rem;
+    border-left: 1px solid gray;
+    color: #607b96;
+    cursor: pointer;
+}
+.botao {
+    display: none;
+}
+/* header */
+.cabeca {
+    flex: 1;
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+.sessao:nth-child(1) {
+    width: 200px;
+    display: flex;
+    align-items: stretch;
+    justify-content: start;
+    flex-direction: column;
+    border-right: 1px solid gray;
+}
+.sessao:nth-child(1) h2 {
+    font-size: var(--font-size-labels);
+    padding:.2rem;
+    text-align: center;
+}
+.sessao:nth-child(1) ul{
+    list-style: none;
+    border-top: 1px solid gray;
+    width: 100%;
+    padding: 1rem 0 0 0;
+}
+.sessao:nth-child(1) li {
+    display: flex;
+    gap: 1rem;
+    margin: .5rem 1rem;
+}
+.sessao:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+.sessao:nth-child(2) > h2 {
+    font-size: var(--font-size-labels);
+    padding:.2rem;
+    margin-left: .8rem;
+    border-right: 1px solid gray;
+    width: fit-content;
+}
+.sessao:nth-child(2) > .codigo-informacoes {
+    border-top: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Carrossel */
+.carousel {
+    position: relative;
+    width: 50%;
+    height: 70%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(100, 148, 237, 0.116);
+    backdrop-filter: blur(2px);
+}
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 86dvw;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.carousel > button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+/* footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #607b96;
+}
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+footer li {
+    padding: 1rem;
+}
+footer > ul li:nth-child(2) {
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+}
+footer > ul li:nth-child(3) {
+    border-right: 1px solid gray;
+}
+footer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-left: 1px solid gray;
+}
+footer > div span {
+    margin-right: .5rem;
+}
