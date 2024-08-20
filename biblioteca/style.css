@@ -1,0 +1,38 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+nav {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+header {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    gap: 1rem;
+}
+h1 {
+    text-align: center;
+}
+header section:nth-child(2){
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+aside > ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
