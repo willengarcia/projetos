@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
 * {
     padding: 0%;
     margin: 0%;
@@ -25,7 +32,7 @@ nav > ul {
 }
 header {
     display: grid;
-    grid-template-columns: 300px 1fr 300px;
+    grid-template-columns: 300px 1fr;
     gap: 1rem;
 }
 h1 {
@@ -36,6 +43,13 @@ header section:nth-child(1){
     grid-column-end: 1;
     align-self: center;
     justify-self: center;
+}
+header section:nth-child(2) div:nth-child(1) {
+    width: 90%;
+    margin: auto;
+}
+header section:nth-child(2) div:nth-child(1) p {
+    line-height: 1.5rem;
 }
 header section:nth-child(1) img {
     width: 150px;
@@ -57,28 +71,6 @@ header section:nth-child(2) div:nth-child(2) button {
     padding: .5rem .7rem ;
 
 }
-header section:nth-child(3){
-    align-self: center;
-    justify-self: baseline;
-    grid-column-start: 3;
-    grid-column-end: 3;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-header section:nth-child(3) h2 {
-    text-align: center;
-}
-header section:nth-child(3) p {
-    text-align: justify;
-    text-wrap: wrap;
-}
-header section:nth-child(3) ul {
-    list-style: none;
-    display: flex;
-
-}
 main {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -86,43 +78,33 @@ main {
 }
 main section:nth-child(1) {
     grid-column-start: 1;
-    grid-column-end: 1;
-    align-self: center;
-    justify-self: center;
+    grid-column-end: 3;
 }
-main section:nth-child(1) li {
+main section:nth-child(1) ul {
     list-style: none;
-    padding: .3rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+main section:nth-child(1) ul li {
+    display: flex;
+    width: 300px;
+    padding: .3rem;
     border: 1px solid black;
-    margin: .3rem auto;
-    border-radius: 10px;
-    cursor: pointer;
+    border-radius: 5px;
 }
-main section:nth-child(2){
-    grid-column-start: 2;
-    grid-column-end: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-main section:nth-child(2) ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-main section:nth-child(3) {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-main section:nth-child(3) ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-main section:nth-child(3) ul img {
+main section:nth-child(1) ul img {
     width: 100px;
+}
+main section:nth-child(1) ul h2 {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+main section:nth-child(1) ul h3 {
+    font-size: 14px;
+    margin: .5rem auto;
 }
 footer ul {
     display: flex;

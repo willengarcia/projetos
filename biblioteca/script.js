@@ -4,35 +4,101 @@ const botaoPesquisar = document.getElementById('pesquisar')
 const imagemLivro = document.getElementById('imagem-livro')
 const tituloH1 = document.getElementById('titulo')
 const descricaoP = document.getElementById('descricao')
-const autorH2 = document.getElementById('autor')
-const informacoesAutorP = document.getElementById('informacoes-autor')
-function pegarLivros(livro, chave){
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${livro}+intitle&key=${chave}`)
-    .then(res=>res.json())
-    .then(res=>{
-        let informacoesLivro = res.items[0].volumeInfo
-        //let imagem = res.items[0].volumeInfo.imageLinks.thumbnail
-        tituloH1.innerText = informacoesLivro.title
-        descricaoP.innerText = informacoesLivro.description
-        //imagemLivro.src = imagem
-
-        for (let index = 0; index < res.items.length; index++) {
-            const element = res.items[index];
-            console.log(element.volumeInfo)
-            if(element.volumeInfo.imageLinks.thumbnail){
-                let imagem = element.volumeInfo.imageLinks.thumbnail
-                imagemLivro.src = imagem
-            }
-            if(element.volumeInfo.description){
-                descricaoP.innerText = element.volumeInfo.description
-            }
-            if(element.volumeInfo.title == livro.replace(/ +/g, ' ')){
-                tituloH1.innerText = informacoesLivro.title
-            }
-        }
-
+const classeLivrosUl = document.querySelector('.livros')
+function criarLi(tamanhoObjeto, imagem, titulo, autor, publicacao, editora, avaliacao){
+    let li = []
+    let img = []
+    let div = []
+    let h2 = []
+    let h3Autor =  []
+    let h3Publicacao = []
+    let h3Editora = []
+    let h3Avaliacao = []
+    for (let index = 0; index < tamanhoObjeto; index++) {
+        li.push(document.createElement('li'))
+        img.push(document.createElement('img'))
+        div.push(document.createElement('div'))
+        h2.push(document.createElement('h2'))
+        h3Autor.push(document.createElement('h3'))
+        h3Publicacao.push(document.createElement('h3'))
+        h3Editora.push(document.createElement('h3'))
+        h3Avaliacao.push(document.createElement('h3'))
+    }
+    img.forEach((elemento, indice)=>{
+        elemento.setAttribute('src', `${imagem[indice]}`)
+    })
+    h2.forEach((elemento, indice)=>{
+        elemento.innerText = `Título: ${titulo[indice]}`
+    })
+    h3Autor.forEach((elemento, indice)=>{
+        elemento.innerText = `Autor: ${autor[indice]}`
+    })
+    h3Publicacao.forEach((elemento, indice)=>{
+        elemento.innerText = `Publicação: ${publicacao[indice]}`
+    })
+    h3Editora.forEach((elemento, indice)=>{
+        elemento.innerText = `Editora: ${editora[indice]}`
+    })
+    h3Avaliacao.forEach((elemento, indice)=>{
+        elemento.innerText = `Avaliação: ${avaliacao[indice]}`
+    })
+    div.forEach((elemento, indice)=>{
+        elemento.appendChild(h2[indice])
+        elemento.appendChild(h3Autor[indice])
+        elemento.appendChild(h3Publicacao[indice])
+        elemento.appendChild(h3Editora[indice])
+        elemento.appendChild(h3Avaliacao[indice])
+    })
+    li.forEach((elemento, indice)=>{
+        classeLivrosUl.appendChild(elemento)
+        elemento.appendChild
+        elemento.appendChild(img[indice])
+        elemento.appendChild(div[indice])
     })
 }
+function pegarLivroAll(livros, chave){
+    if(livros ==''){
+        alert('Adicione o título de um livro ou o autor de algum livro')
+    }else{
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=${livros}&key=${chave}`)
+        .then(res=>res.json())
+        .then(res=>{
+            let arrayObjetosLivros = []
+            let autores = []
+            let titulos = []
+            let publicacoes = []
+            let editoras = []
+            let avaliacao = []
+            let imagens = []
+            for (let indice = 0; indice < res.items.length; indice++) {
+                arrayObjetosLivros.push(res.items[indice])
+            }
+            for (const iterator of arrayObjetosLivros) {
+                if(iterator.volumeInfo.authors){
+                    autores.push(iterator.volumeInfo.authors[0])
+                }
+                titulos.push(iterator.volumeInfo.title)
+                publicacoes.push(iterator.volumeInfo.publishedDate)
+                editoras.push(iterator.volumeInfo.publisher)
+                avaliacao.push(iterator.volumeInfo.averageRating)
+                if(iterator.volumeInfo.imageLinks && iterator.volumeInfo.imageLinks.thumbnail){
+                    imagens.push(iterator.volumeInfo.imageLinks.thumbnail)
+                }else {
+                    imagens.push('./imagens/not-found.png')
+                }
+                
+            }
+            criarLi(arrayObjetosLivros.length, imagens, titulos, autores, publicacoes, editoras, avaliacao)
+            descricaoP.innerText = arrayObjetosLivros[0].volumeInfo.description || 'Sem descrição do livro'
+            tituloH1.innerText = arrayObjetosLivros[0].volumeInfo.title || 'Título não encontrado'
+            imagemLivro.src = arrayObjetosLivros[0].volumeInfo.imageLinks.thumbnail || './imagens/not-found.png'
+        })
+    }
+}
 botaoPesquisar.addEventListener('click', (evt)=>{
-    pegarLivros(inputLivro.value.replace(/ /g, '+'), key)
+    // Nome completo do livro e autor
+    let tituloAutor = inputLivro.value;
+    // Substitui espaços e hífens no nome do autor por +
+    let tituloFormatado = tituloAutor.replace(/ /g, "+")
+    pegarLivroAll(tituloFormatado, key)
 })
