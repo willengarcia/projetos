@@ -6,18 +6,27 @@ const tituloH1 = document.getElementById('titulo')
 const descricaoP = document.getElementById('descricao')
 const classeLivrosUl = document.querySelector('.livros')
 function criarLi(tamanhoObjeto, imagem, titulo, autor, publicacao, editora, avaliacao){
+    let link = "<ul><li><a href='#'>Instagram</a></li><li><a href='#'>Whatsapp</a></li><li><a href='#'>Telegram</a></li><li><a href='#'>Twitter</a></li></ul>"
+    let links = []
     let li = []
     let img = []
     let div = []
+    let divFlipper = []
+    let divFrente = []
+    let divVerso = []
     let h2 = []
     let h3Autor =  []
     let h3Publicacao = []
     let h3Editora = []
     let h3Avaliacao = []
     for (let index = 0; index < tamanhoObjeto; index++) {
+        links.push(link)
         li.push(document.createElement('li'))
         img.push(document.createElement('img'))
         div.push(document.createElement('div'))
+        divFlipper.push(document.createElement('div'))
+        divFrente.push(document.createElement('div'))
+        divVerso.push(document.createElement('div'))
         h2.push(document.createElement('h2'))
         h3Autor.push(document.createElement('h3'))
         h3Publicacao.push(document.createElement('h3'))
@@ -51,9 +60,17 @@ function criarLi(tamanhoObjeto, imagem, titulo, autor, publicacao, editora, aval
     })
     li.forEach((elemento, indice)=>{
         classeLivrosUl.appendChild(elemento)
-        elemento.appendChild
-        elemento.appendChild(img[indice])
-        elemento.appendChild(div[indice])
+        elemento.setAttribute('class', 'flipper-container')
+        elemento.setAttribute('onclick', "this.classList.toggle('flipped')")
+        elemento.appendChild(divFlipper[indice])
+        divFlipper[indice].setAttribute('class', 'flipper')
+        divFlipper[indice].appendChild(divFrente[indice])
+        divFlipper[indice].appendChild(divVerso[indice])
+        divVerso[indice].setAttribute('class', 'verso')
+        divFrente[indice].setAttribute('class', 'frente')
+        divVerso[indice].innerHTML = links[indice]
+        divFrente[indice].appendChild(img[indice])
+        divFrente[indice].appendChild(div[indice])
     })
 }
 function pegarLivroAll(livros, chave){
@@ -101,4 +118,7 @@ botaoPesquisar.addEventListener('click', (evt)=>{
     // Substitui espaços e hífens no nome do autor por +
     let tituloFormatado = tituloAutor.replace(/ /g, "+")
     pegarLivroAll(tituloFormatado, key)
+})
+window.addEventListener('load', ()=>{
+    pegarLivroAll('Harry+Potter', key)
 })
