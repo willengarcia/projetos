@@ -5,8 +5,13 @@ const imagemLivro = document.getElementById('imagem-livro')
 const tituloH1 = document.getElementById('titulo')
 const descricaoP = document.getElementById('descricao')
 const classeLivrosUl = document.querySelector('.livros')
-function criarLi(tamanhoObjeto, imagem, titulo, autor, publicacao, editora, avaliacao){
-    let link = "<ul><li><a href='#'>Instagram</a></li><li><a href='#'>Whatsapp</a></li><li><a href='#'>Telegram</a></li><li><a href='#'>Twitter</a></li></ul>"
+const classeFlipper = [...document.querySelectorAll('.flipper-container')]
+function limparLi(objeto){
+    objeto.forEach(elemento=>{
+        elemento.remove()
+    })
+}
+function criarLi(tamanhoObjeto, imagem, titulo, autor, publicacao, editora, avaliacao, linkRedirecionamento){
     let links = []
     let li = []
     let img = []
@@ -19,8 +24,8 @@ function criarLi(tamanhoObjeto, imagem, titulo, autor, publicacao, editora, aval
     let h3Publicacao = []
     let h3Editora = []
     let h3Avaliacao = []
-    for (let index = 0; index < tamanhoObjeto; index++) {
-        links.push(link)
+    for (let index = 0; index < tamanhoObjeto.length; index++) {
+        links.push(`<ul><li><a href='#'>Instagram</a></li><li><a href='https://api.whatsapp.com/send?text=${linkRedirecionamento[index]}' class='whatsapp'>Whatsapp</a></li><li><a href='#'>Telegram</a></li><li><a href='#'>Twitter</a></li></ul>`)
         li.push(document.createElement('li'))
         img.push(document.createElement('img'))
         div.push(document.createElement('div'))
@@ -87,6 +92,7 @@ function pegarLivroAll(livros, chave){
             let editoras = []
             let avaliacao = []
             let imagens = []
+            let infoLinks = []
             for (let indice = 0; indice < res.items.length; indice++) {
                 arrayObjetosLivros.push(res.items[indice])
             }
@@ -105,10 +111,20 @@ function pegarLivroAll(livros, chave){
                 }
                 
             }
-            criarLi(arrayObjetosLivros.length, imagens, titulos, autores, publicacoes, editoras, avaliacao)
+            for (let index = 0; index < res.items.length; index++) {
+                infoLinks.push(res.items[index].volumeInfo.infoLink)
+                
+            }
+            criarLi(arrayObjetosLivros, imagens, titulos, autores, publicacoes, editoras, avaliacao, infoLinks)
+
             descricaoP.innerText = arrayObjetosLivros[0].volumeInfo.description || 'Sem descrição do livro'
             tituloH1.innerText = arrayObjetosLivros[0].volumeInfo.title || 'Título não encontrado'
-            imagemLivro.src = arrayObjetosLivros[0].volumeInfo.imageLinks.thumbnail || './imagens/not-found.png'
+            if(arrayObjetosLivros[0].volumeInfo.imageLinks == undefined){
+                imagemLivro.src = 'imagens/not-found.png'
+            }else {
+                imagemLivro.src = arrayObjetosLivros[0].volumeInfo.imageLinks.thumbnail
+            }
+            console.log(infoLinks)
         })
     }
 }
@@ -118,7 +134,5 @@ botaoPesquisar.addEventListener('click', (evt)=>{
     // Substitui espaços e hífens no nome do autor por +
     let tituloFormatado = tituloAutor.replace(/ /g, "+")
     pegarLivroAll(tituloFormatado, key)
-})
-window.addEventListener('load', ()=>{
-    pegarLivroAll('Harry+Potter', key)
+    limparLi([...document.querySelectorAll('.flipper-container')])
 })
